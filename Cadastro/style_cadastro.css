@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(7, 24, 7);
+    background: url(Images/Background\ 3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     display: flex;
@@ -9,17 +11,18 @@ body {
 }
 
 .container {
-    background-color: rgb(91, 170, 91);
+    background: transparent;
     padding-inline: 60px;
     border: 2px solid rgb(10, 94, 17);
     border-radius: 5px;
     margin: 10px;
+    margin-top: 10vh;
 }
 
 .container input {
-    background-color: rgb(118, 199, 129);
+    background-color: transparent;
     margin: 5px;
-    border: 2px solid rgb(0, 66, 17);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     text-align: center;
     padding-inline: 90px;
@@ -29,14 +32,14 @@ body {
 }
 
 p {
-    color: rgb(228, 255, 235);
+    color: rgb(0, 0, 0);
     box-shadow: 1px 1px 3px;
     background-color: rgba(118, 199, 129, 0.205);
     border-radius: 10px;
 }
 
 #NameUser::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-style: bold;
     font-size: 15px;
     padding : 20px;
