@@ -1,14 +1,22 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/poppins/Poppins-Black.ttf) format('ttf');
+}
+
+
 body {
     background: url(../assets/Images/Background\ 3.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:  "Poppins";
     font-size: 20px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
+
+
 
 .container {
     background: rgba(43, 43, 43, 0.507);
