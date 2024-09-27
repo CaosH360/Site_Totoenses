@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/style_cadastro.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="camp">
+        <p>
+          Digite seu Nick de Usuario
+          <details>
+            <summary>Detalhes</summary>
+            <div class="content">
+              <p>Este é o nome que aparecera para os outros jogadores</p>
+            </div>
+          </details>
+        </p>
+        <input type="text" id="NameUser" placeholder="Nome de Usuario" />
+      </div>
+      <div class="camp">
+        <p>Digite sua Idade</p>
+        <input type="number" id="Yaer" placeholder="idade" />
+      </div>
+      <div class="camp">
+        <p>Digite seu sexo</p>
+        <form>
+          <label for="sexo"></label>
+          <select id="sexo" name="opcoes">
+            <option value="sexo1">Homem</option>
+            <option value="sexo2">Mulher</option>
+            <option value="sexo3">Outro</option>
+          </select> <br>
+          <p>caso seja outro digiti-o abaixo</p>
+          <input type="text" id="Sexo" placeholder="Digite seu Sexo" /><br />
+        </form>
+      </div>
+      <div class="camp">
+        <p>Qual sua Especialidade de Jogo?</p>
+        <form>
+          <label for="opcoes"></label>
+          <select id="opcoes" name="opcoes">
+            <option value="opcao1">Atacante</option>
+            <option value="opcao2">Zagueiro</option>
+            <option value="opcao3">Ambos</option></select
+          ><br />
+        </form>
+      </div>
+      <div class="camp">
+        <p>Qual seu nivel de Jogo?</p>
+        <form>
+          <label for="opcoes"></label>
+          <select id="opcoes" name="opcoes">
+            <option value="opcao1">Iniciante</option>
+            <option value="opcao2">Intermediario</option>
+            <option value="opcao3">Avançado</option>
+            <option value="opcao4">Lenda</option></select
+          ><br /><br />
+        </form>
+      </div>
+      <input type="submit" id="
+      " value="Enviar" />
+    </div>
+  </body>
+</html>
