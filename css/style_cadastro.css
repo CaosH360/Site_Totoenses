@@ -5,7 +5,7 @@
 
 
 body {
-    background: url(../assets/Images/Background\ 3.jpg) no-repeat;
+    background: url(../assets/Images/background_1.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     font-family:  "Poppins";
@@ -69,43 +69,13 @@ form select {
     border-radius: 10px;
 }
 
-#NameUser::-webkit-input-placeholder {
+.cadastro::-webkit-input-placeholder {
     color: rgb(255, 255, 255);
     font-style: bold;
     font-size: 15px;
     padding : 20px;
 }
 
-#Yaer::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-}
-#Sexo::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-}
-#nome::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-}
-#email::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-}
-#senha::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-}
 #submit {
     color: rgb(255, 255, 255);
     font-style: bold;
