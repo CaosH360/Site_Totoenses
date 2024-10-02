@@ -1,85 +1,135 @@
 @font-face {
-    font-family: "Poppins";
-    src: url(../assets/fonts/poppins/Poppins-Black.ttf) format('ttf');
+  font-family: "Poppins";
+  src: url(../assets/fonts/poppins/Poppins-Black.ttf) format("ttf");
 }
-
 
 body {
-    background: url(../assets/Images/background_1.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family:  "Poppins";
-    font-size: 20px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  background: url(../assets/Images/background_1.jpeg) no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  background-position: center;
+  font-family: "Poppins";
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
 .container {
-    background: rgba(43, 43, 43, 0.507);
-    padding-inline: 60px;
-    border: 2px solid rgba(0, 0, 0, 0.623);
-    border-radius: 5px;
-    margin: 10px;
-    margin-top: 10vh;
+  background: rgba(43, 43, 43, 0.507);
+  padding-inline: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.623);
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: 10vh;
 }
 
 .container input {
-    background-color: transparent;
-    margin: 5px;
-    border: 2px solid rgb(238, 238, 238);
-    border-radius: 10px;
-    text-align: center;
-    padding-inline: 90px;
-    max-width: 100vh;
-    box-shadow: 0px 3px 2px rgba(192, 192, 192, 0.575);
-    position: relative;
+  background-color: transparent;
+  margin: 5px;
+  border: 2px solid rgb(238, 238, 238);
+  border-radius: 10px;
+  text-align: center;
+  padding-inline: 90px;
+  max-width: 100vh;
+  box-shadow: 0px 3px 2px rgba(192, 192, 192, 0.575);
+  position: relative;
 }
 
 p {
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 3px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px;
 }
 
 details {
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 3px;
-    position: relative;
-    cursor: pointer;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px;
+  position: relative;
+  cursor: pointer;
 }
 
-details [open] .content{
-    max-height: 500px;
-    transition: max-height 0.5s ease-in-out;
-
+details [open] .content {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .content {
-    max-height: 0;
-    transition: max-heigth 0.5s ease-in-out;
+  max-height: 0;
+  transition: max-heigth 0.5s ease-in-out;
 }
 
 form select {
-    cursor: pointer;
-    background-color: grey;
-    color: white;
-    border-radius: 10px;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
 }
 
 .cadastro::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
+  color: rgb(255, 255, 255);
+  font-style: bold;
+  font-size: 15px;
+  padding: 20px;
 }
 
-#submit {
-    color: rgb(255, 255, 255);
-    font-style: bold;
-    font-size: 15px;
-    padding : 20px;
-    padding-inline: 50%;
+/* Para telas de 1920x1080 */
+@media (min-width: 1920px) {
+    body {
+        font-size: 22px;
+    }
+    .container {
+        padding-inline: 80px;
+    }
 }
+
+/* Para telas de 1366x768 */
+@media (min-width: 1366px) and (max-width: 1919px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        padding-inline: 60px;
+    }
+    .container input {
+        padding-inline: 70px;
+    }
+}
+
+/* Para tablets com 768x1024 */
+@media (min-width: 768px) and (max-width: 1365px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding-inline: 40px;
+    }
+    .container input {
+        padding-inline: 50px;
+    }
+}
+
+/* Para dispositivos móveis 360x720 */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+        display: block;
+    }
+    .container {
+        padding-inline: 20px;
+        margin-top: 5vh;
+        margin-inline: 5vw;
+        margin-block: 15vh;
+    }
+    .container input {
+        padding-inline: 20px;
+        max-width: 100%;
+    } }
+
+#submit {
+  color: rgb(255, 255, 255);
+  font-style: bold;
+  font-size: 15px;
+  padding: 20px;
+  padding-inline: 50%;
+    }
