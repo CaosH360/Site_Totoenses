@@ -1,6 +1,59 @@
-@font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/poppins/Poppins-Black.ttf) format("ttf");
+/* Para telas de 1920x1080 */
+@media (min-width: 1920px) {
+  body {
+    font-size: 22px;
+  }
+  .container {
+    padding-inline: 80px;
+  }
+}
+
+/* Para telas de 1366x768 */
+@media (min-width: 1366px) and (max-width: 1919px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding-inline: 60px;
+  }
+  .container input {
+    padding-inline: 70px;
+  }
+}
+
+/* Para tablets com 768x1024 */
+@media (min-width: 768px) and (max-width: 1365px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding-inline: 40px;
+    margin-top: 5vh;
+    margin-inline: 5vw;
+    margin-block: 15vh;
+  }
+
+  .container input {
+    padding-inline: 50px;
+  }
+}
+
+/* Para dispositivos móveis 360x720 */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    display: block;
+  }
+  .container {
+    padding-inline: 20px;
+    margin-top: 5vh;
+    margin-inline: 5vw;
+    margin-block: 15vh;
+  }
+  .container input {
+    padding-inline: 20px;
+    max-width: 100%;
+  }
 }
 
 body {
@@ -17,29 +70,69 @@ body {
 }
 
 .container {
-  background: rgba(43, 43, 43, 0.507);
+  background: #00294c2c;
   padding-inline: 60px;
-  border: 2px solid rgba(0, 0, 0, 0.623);
-  border-radius: 5px;
+  height: 70vh;
+  border: 2px solid #1f3b53;
+  border-radius: 15px;
   margin: 10px;
   margin-top: 10vh;
+  padding-block: 5vh;
+  margin-block: 10vh;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .container input {
-  background-color: transparent;
   margin: 5px;
-  border: 2px solid rgb(238, 238, 238);
-  border-radius: 10px;
+  border: 2px solid #1f3b53;
+  border-radius: 15px;
+  background-color: #e9740d80;
   text-align: center;
-  padding-inline: 90px;
-  max-width: 100vh;
+  padding-inline: 20vw;
+  max-width: 20vw;
   box-shadow: 0px 3px 2px rgba(192, 192, 192, 0.575);
   position: relative;
+  cursor: pointer;
 }
 
-p {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 3px;
+.container input:hover {
+  background-color: #924400a6;
+}
+
+.container #nome,
+#email,
+#senha {
+  padding-block: 4px;
+}
+
+.container p {
+  font-family: "Poppins";
+  font-size: 20px;
+  color: #e1e1e1;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+}
+
+.container #submit {
+  font-family: "Oswald";
+}
+
+.cadastro::-webkit-input-placeholder {
+  color: #FFFFFF;
+  font-style: bold;
+  font-size: 20px;
+  padding: 20px;
+  font-family: 'Lora';
+} 
+
+form select {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
 }
 
 details {
@@ -54,82 +147,10 @@ details [open] .content {
   transition: max-height 0.5s ease-in-out;
 }
 
-.content {
-  max-height: 0;
-  transition: max-heigth 0.5s ease-in-out;
-}
-
-form select {
-  cursor: pointer;
-  background-color: grey;
-  color: white;
-  border-radius: 10px;
-}
-
-.cadastro::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
-  font-style: bold;
-  font-size: 15px;
-  padding: 20px;
-}
-
-/* Para telas de 1920x1080 */
-@media (min-width: 1920px) {
-    body {
-        font-size: 22px;
-    }
-    .container {
-        padding-inline: 80px;
-    }
-}
-
-/* Para telas de 1366x768 */
-@media (min-width: 1366px) and (max-width: 1919px) {
-    body {
-        font-size: 18px;
-    }
-    .container {
-        padding-inline: 60px;
-    }
-    .container input {
-        padding-inline: 70px;
-    }
-}
-
-/* Para tablets com 768x1024 */
-@media (min-width: 768px) and (max-width: 1365px) {
-    body {
-        font-size: 16px;
-    }
-    .container {
-        padding-inline: 40px;
-    }
-    .container input {
-        padding-inline: 50px;
-    }
-}
-
-/* Para dispositivos móveis 360x720 */
-@media (max-width: 767px) {
-    body {
-        font-size: 14px;
-        display: block;
-    }
-    .container {
-        padding-inline: 20px;
-        margin-top: 5vh;
-        margin-inline: 5vw;
-        margin-block: 15vh;
-    }
-    .container input {
-        padding-inline: 20px;
-        max-width: 100%;
-    } }
-
 #submit {
   color: rgb(255, 255, 255);
   font-style: bold;
   font-size: 15px;
-  padding: 20px;
+  padding: 10px;
   padding-inline: 50%;
     }
