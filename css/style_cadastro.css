@@ -72,7 +72,7 @@ body {
 .container {
   background: #00294c2c;
   padding-inline: 60px;
-  height: 100vh;
+  height: 110vh;
   max-width: 60vw;
   border: 2px solid #1f3b53;
   border-radius: 15px;
@@ -98,6 +98,16 @@ body {
   flex-direction: column;
   padding: 1rem;
   font-family: "Poppins";
+}
+
+.form-title {
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  margin-inline: 5px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
 }
 
 .form-header {
@@ -170,6 +180,7 @@ body {
   text-align: center;
   padding-inline: 15vw;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .input-box input::placeholder {
