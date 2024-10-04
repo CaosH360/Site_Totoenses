@@ -72,85 +72,165 @@ body {
 .container {
   background: #00294c2c;
   padding-inline: 60px;
-  height: 70vh;
+  height: 100vh;
+  max-width: 60vw;
   border: 2px solid #1f3b53;
   border-radius: 15px;
   margin: 10px;
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-block: 5vh;
-  margin-block: 10vh;
+  margin-bottom: 18vh;
   justify-content: center;
   align-items: center;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.container input {
-  margin: 5px;
-  border: 2px solid #1f3b53;
-  border-radius: 15px;
-  background-color: #e9740d80;
-  text-align: center;
-  padding-inline: 20vw;
-  max-width: 20vw;
-  box-shadow: 0px 3px 2px rgba(192, 192, 192, 0.575);
-  position: relative;
-  cursor: pointer;
-}
-
-.container input:hover {
-  background-color: #924400a6;
-}
-
-.container #nome,
-#email,
-#senha {
-  padding-block: 4px;
-}
-
-.container p {
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
   font-family: "Poppins";
-  font-size: 20px;
-  color: #e1e1e1;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 5px;
+  color: #ffffff;
   text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
     -1px -1px 0px #7c7c7c;
 }
 
-.container #submit {
+.login-button {
+  display: flex;
+  align-items: center;
+}
+
+.login-button button {
+  border: none;
+  background-color: #ff7f0f;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
   font-family: "Oswald";
 }
 
-.cadastro::-webkit-input-placeholder {
-  color: #FFFFFF;
-  font-style: bold;
-  font-size: 20px;
-  padding: 20px;
-  font-family: 'Lora';
-} 
+.login-button button:hover {
+  background-color: #d86500;
+}
 
-form select {
-  cursor: pointer;
-  background-color: grey;
-  color: white;
+.login-button button a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-header h1::after {
+  content: "";
+  display: block;
+  width: 17rem;
+  height: 0.3rem;
+  background-color: #ff7f0f;
+  margin: 0 auto;
+  position: absolute;
   border-radius: 10px;
 }
 
-details {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 3px;
-  position: relative;
-  cursor: pointer;
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.2rem;
+  align-items: center;
 }
 
-details [open] .content {
-  max-height: 500px;
-  transition: max-height 0.5s ease-in-out;
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem;
 }
 
-#submit {
-  color: rgb(255, 255, 255);
+.input-box input {
+  margin: 0.4rem;
+  padding: 0.25rem 1.2rem;
+  border: 1px solid #1f3b53;
+  border-radius: 15px;
+  background-color: #e9740d49;
+  text-align: center;
+  padding-inline: 15vw;
+  color: #ffffff;
+}
+
+.input-box input::placeholder {
+  color: #ffffff;
   font-style: bold;
   font-size: 15px;
-  padding: 10px;
-  padding-inline: 50%;
-    }
+  padding: 20px;
+  font-family: "Lora";
+}
+
+.input-box input:hover {
+  background-color: #ad5100bd;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid #ff7f0f;
+}
+
+.input-box label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+}
+
+.input-box select {
+  cursor: pointer;
+  background-color: #dd7600bb;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #1f3b53;
+}
+
+.input-box select:hover {
+  background-color: #965d1c;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.continue-button button {
+  border: none;
+  background-color: #ff7f0f;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Oswald";
+  margin-top: 20px;
+}
+
+.continue-button button:hover {
+  background-color: #d86500;
+}
+
+.continue-button button a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: #ffffff;
+}
