@@ -72,7 +72,7 @@ body {
 .container {
   background: #00294c2c;
   padding-inline: 60px;
-  height: 110vh;
+  height: 140vh;
   max-width: 60vw;
   border: 2px solid #1f3b53;
   border-radius: 15px;
@@ -213,6 +213,7 @@ body {
   color: white;
   border-radius: 10px;
   border: 1px solid #1f3b53;
+  text-align: center;
 }
 
 .input-box select:hover {
