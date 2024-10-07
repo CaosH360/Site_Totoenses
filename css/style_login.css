@@ -1,0 +1,208 @@
+/* Para telas de 1920x1080 */
+@media (min-width: 1920px) {
+  body {
+    font-size: 22px;
+  }
+  .container {
+    padding-inline: 80px;
+  }
+}
+
+/* Para telas de 1366x768 */
+@media (min-width: 1366px) and (max-width: 1919px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding-inline: 60px;
+  }
+  .container input {
+    padding-inline: 70px;
+  }
+}
+
+/* Para tablets com 768x1024 */
+@media (min-width: 768px) and (max-width: 1365px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding-inline: 40px;
+    margin-top: 5vh;
+    margin-inline: 5vw;
+    margin-block: 15vh;
+  }
+
+  .container input {
+    padding-inline: 50px;
+  }
+}
+
+/* Para dispositivos móveis 360x720 */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    display: block;
+  }
+  .container {
+    padding-inline: 20px;
+    margin-top: 5vh;
+    margin-inline: 5vw;
+    margin-block: 15vh;
+  }
+  .container input {
+    padding-inline: 20px;
+    max-width: 100%;
+  }
+}
+
+body {
+  background: url(../assets/Images/background_1.jpeg) no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  background-position: center;
+  font-family: "Poppins";
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #00294c2c;
+  padding-inline: 60px;
+  height: 80vh;
+  max-width: 60vw;
+  border: 2px solid #1f3b53;
+  border-radius: 15px;
+  margin: 10px;
+  margin-top: 5vh;
+  padding-block: 5vh;
+  margin-bottom: 18vh;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  font-family: "Poppins";
+}
+
+.form-title {
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  margin-inline: 5px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 5px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+}
+
+
+.form-header h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.3rem;
+  background-color: #ff7f0f;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.2rem;
+  align-items: center;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem;
+}
+
+.input-box input {
+  margin: 0.4rem;
+  padding: 0.25rem 1.2rem;
+  border: 1px solid #1f3b53;
+  border-radius: 15px;
+  background-color: #e9740d49;
+  text-align: center;
+  padding-inline: 15vw;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.input-box input::placeholder {
+  color: #ffffff;
+  font-style: bold;
+  font-size: 15px;
+  padding: 20px;
+  font-family: "Lora";
+}
+
+.input-box input:hover {
+  background-color: #ad5100bd;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid #ff7f0f;
+}
+
+.input-box label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+}
+
+.continue-button {
+  margin: 50px;
+}
+
+.continue-button button {
+  border: none;
+  background-color: #ff7f0f;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Oswald";
+}
+
+.continue-button button:hover {
+  background-color: #d86500;
+}
+
+.continue-button button a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: #ffffff;
+}
