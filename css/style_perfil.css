@@ -1,0 +1,93 @@
+body {
+  background: url(../assets/Images/background/background_2.jpg) no-repeat center
+    center;
+  background-size: cover;
+  background-clip: padding-box;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Poppins';
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+    letter-spacing: 0.2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column 5fr;
+  flex-wrap: wrap;
+  background: url(../assets/Images/banner_perfil/BANNER_TOTO_7.png) no-repeat
+    center center;
+  background-size: cover;
+  width: 100vw;
+  height: 40vh;
+  max-height: 50vh;
+  border-bottom: 5px solid #ffffff;
+  border-top: 5px solid #ffffff;
+}
+
+.header .perfil-img {
+  margin-right: 20vw;
+  margin: 15px;
+  margin-left: 7vw;
+}
+
+.header .perfil-img img {
+  height: 35vh;
+  border: 3px solid #e05a00;
+  border-radius: 30px;
+}
+
+.header .info-nick {
+  margin-left: 60vw;
+  position: absolute;
+  margin-top: 7rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+  }
+
+.header .info-nick::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 0.3rem;
+  background-color: #ff7f0f;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.main-container {
+  padding: 100px 100px;
+  background: #1f3b53c9; 
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+
+}
+
+
+.data-group {
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+#container-box {
+  height: 200px;
+  width: 200px;
+  background: #e05a00a8;
+}
+
+.info-player {
+  flex-basis: 300px;
+  height: 200px;
+}
+
+
