@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+    background: url(../assets/Images/background/background_4.jpeg) no-repeat center center;
+    background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% solid;
+  border: 2px solid #00153081;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  background-color: #0058db34;
+}
+
+header div.galeria {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+}
+
+header div.galeria div.single-galeria {
+  position: relative;
+  width: 10%;
+  height: 90%;
+  margin: 0 5px;
+  transition: width 1s;
+  border: 3px solid #ffd45c5b;
+  border-radius: 5px;
+}
+
+header div.galeria div.single-galeria:first-child {
+  width: 70% !important;
+}
+
+header div.galeria div.single-galeria:hover {
+  width: 70%;
+}
+
+header div.galeria:hover div.single-galeria:first-child {
+  width: 20% !important;
+}
+
+header div.galeria div.single-galeria:hover:first-child {
+  width: 70% !important;
+}
+
+header div.galeria div.single-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header div.galeria div.single-galeria div.info {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 65%, transparent);
+  padding: 1% 8%;
+  bottom: 0;
+}
+
+header div.galeria div.single-galeria div.info h1 {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+header div.galeria div.single-galeria div.info p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+header div.galeria div.single-galeria div.info a {
+  font-size: 18px;
+  color: #e77000;
+  text-decoration: none;
+}
+
+header div.galeria div.single-galeria div.info a:hover {
+  text-decoration: underline;
+}
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 8%;
+    display: grid;
+    place-items: center;
+}
+
+section p {
+    color: rgba(100, 100, 100);
+    font-size: 22px;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 764px) {
+    header div.galeria {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: flex-start;
+        overflow: scroll;
+      }
+      
+      header div.galeria div.single-galeria {
+        position: relative;
+        min-width: 90% !important;
+        height: 60%;
+        margin: 0 5px;
+        transition: width 1s;
+      }
+    }
