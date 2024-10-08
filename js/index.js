@@ -1,6 +1,8 @@
 const btn_open_menu = document.getElementById("btn_open_menu");
 const list_menu = document.getElementById("list_menu");
 
+
+
 var active = false;
 
 btn_open_menu.addEventListener("click",()=>{
@@ -12,3 +14,4 @@ btn_open_menu.addEventListener("click",()=>{
         active=false;
     }
 });
+

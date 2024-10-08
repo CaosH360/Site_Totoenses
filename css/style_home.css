@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 
 a {
@@ -13,11 +14,22 @@ a:hover {
     opacity: 0.7;
 }
 
-.img {
-    font-size:24px;
+    
+
+i{
+    font-size:30px;
     text-transform: uppercase;
     letter-spacing: 4px;
+    position:absolute;
+left:50%;
+transform:translateX(-50%);
+font-family: system-ui,-apple-system,helvetica,arial,sans-serif;
+color: white;
+
 }
+
+
+
 
 nav{
     display: flex;
@@ -29,7 +41,7 @@ nav{
 }
 
 main{
-    background: url("../assets/Images/background_4.jpeg") no-repeat center center;
+    background: url("../assets/Images/pebolim.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
 }
@@ -42,6 +54,7 @@ main{
 .nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
+    margin-bottom:50px;
 }
 
 .mobile-menu {
@@ -56,6 +69,10 @@ main{
     height: 2px;
     background: #fff;
     margin: 8px;
+    position:relative;
+left:650px;
+
+    
 }
 
 @media(max-width:999px){ 
@@ -75,20 +92,35 @@ main{
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+        
     }
 
 }
 
-.nav-list li {
-    margin-left: 0;
-    opacity: 0;
 
-}
 
 .mobile-menu {
     display: block;
+    margin: 0;
 }
 
-.nav-list.active {
-    transform: translateX(0);
+
+
+ul {
+    position: absolute;
+    right:  0px;
+    top: 58px;
+    background-color: #00294C;
+    height: 92%;
+    display:flex;
+flex-direction:column;
+
+
+
+}
+
+
+
+body {
+position: relative;
 }
