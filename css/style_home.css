@@ -1,126 +1,251 @@
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
-    
-
-i{
-    font-size:30px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    position:absolute;
-left:50%;
-transform:translateX(-50%);
-font-family: system-ui,-apple-system,helvetica,arial,sans-serif;
-color: white;
-
+i {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Poppins", system-ui, -apple-system, helvetica, arial, sans-serif;
+  color: white;
 }
 
-
-
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui,-apple-system,helvetica,arial,sans-serif;
-    background-color: #00294C ; 
-    height: 8vh;
-}
-
-main{
-    background: url("../assets/Images/pebolim.jpg") no-repeat center center;
-    background-size: cover;
-    height: 92vh;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", system-ui, -apple-system, helvetica, arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+  letter-spacing: 0.2rem;
+  background-color: #00294c;
+  height: 8vh;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
+  position: fixed;
+  top: 8vh;
+  right: 0;
+  width: 10vw;
+  height: 92vh;
+  background: #00294c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  transform: translateX(100%); /* Esconde o menu fora da tela */
+  opacity: 0; /* Invisível no início */
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 10;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.nav-list.active {
+  transform: translateX(0); /* Move o menu para dentro da tela */
+  opacity: 1; /* Torna o menu visível */ /* Mostra o elemento */
 }
 
 .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-    margin-bottom:50px;
+  letter-spacing: 3px;
+  margin-left: 32px;
+  margin-bottom: 50px;
 }
 
 .mobile-menu {
-    display: none;
-    cursor: pointer;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: 45vw;
+  margin: 0;
+  margin-top: 5px;
 }
 
 
-
-.mobile-menu div{
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-    position:relative;
-left:650px;
-
-    
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  position: relative;
+  margin-top: 0;
+  right: 14px;
 }
 
-@media(max-width:999px){ 
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 30vw;
+    height: 92vh;
+    background: #00294c;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    font-size: 15px;
+  }
 
-    body {
-        overflow-x: hidden;
-    }
-    .nav-list{
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 28vw;
-        height: 92vh;
-        background: #00294C;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        
-    }
+  .mobile-menu {
+    left: 40vw;
+    margin-bottom: 20px;
 
+  }
 }
-
-
-
-.mobile-menu {
-    display: block;
-    margin: 0;
-}
-
 
 
 ul {
-    position: absolute;
-    right:  0px;
-    top: 58px;
-    background-color: #00294C;
-    height: 92%;
-    display:flex;
-flex-direction:column;
-
-
-
+  position: absolute;
+  right: 0px;
+  top: 58px;
+  background-color: #00294c;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
 }
 
+body {
+  position: relative;
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
 
 body {
-position: relative;
+  background: url(../assets/Images/background/background_4.jpeg) no-repeat
+    center center;
+  background-size: cover;
+  display: block;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% solid;
+  border: 2px solid #00153081;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  background-color: #0058db34;
+  position: relative;
+  z-index: 1;
+}
+
+main div.galeria {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+main div.galeria div.single-galeria {
+  position: relative;
+  width: 10%;
+  height: 90%;
+  margin: 0 5px;
+  transition: width 1s;
+  border: 3px solid #ffd45c5b;
+  border-radius: 5px;
+}
+
+main div.galeria div.single-galeria:first-child {
+  width: 50% !important;
+}
+
+main div.galeria div.single-galeria:hover {
+  width: 50%;
+}
+
+main div.galeria:hover div.single-galeria:first-child {
+  width: 20% !important;
+}
+
+main div.galeria div.single-galeria:hover:first-child {
+  width: 50% !important;
+}
+
+main div.galeria div.single-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main div.galeria div.single-galeria div.info {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 65%, transparent);
+  padding: 1% 8%;
+  bottom: 0;
+  overflow: hidden;
+}
+
+main div.galeria div.single-galeria div.info h1 {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+main div.galeria div.single-galeria div.info p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+main div.galeria div.single-galeria div.info a {
+  font-size: 18px;
+  color: #e77000;
+  text-decoration: none;
+}
+
+main div.galeria div.single-galeria div.info a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 764px) {
+  main div.galeria {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
+  main div.galeria div.single-galeria {
+    position: relative;
+    min-width: 90% !important;
+    height: 60%;
+    margin: 0 5px;
+    transition: width 1s;
+  }
 }

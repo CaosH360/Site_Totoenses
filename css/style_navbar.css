@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+i {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Poppins", system-ui, -apple-system, helvetica, arial, sans-serif;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", system-ui, -apple-system, helvetica, arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
+    -1px -1px 0px #7c7c7c;
+  letter-spacing: 0.2rem;
+  background-color: #00294c;
+  height: 8vh;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-list {
+  position: fixed;
+  top: 8vh;
+  right: 0;
+  width: 10vw;
+  height: 92vh;
+  background: #00294c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  transform: translateX(100%); /* Esconde o menu fora da tela */
+  opacity: 0; /* Invisível no início */
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 10;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+.nav-list.active {
+  transform: translateX(0); /* Move o menu para dentro da tela */
+  opacity: 1; /* Torna o menu visível */ /* Mostra o elemento */
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+  margin-bottom: 50px;
+}
+
+.mobile-menu {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: 45vw;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  position: relative;
+  margin-top:2px;
+  right: 13px;
+}
+
+@media (max-width: 999px) {
+  .nav-list {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 20vw;
+    height: 150vh;
+    background: #00294c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 10;
+    font-size: 10px;
+    font-family: "Poppins";
+  }
+
+
+}
+
+ul {
+  position: absolute;
+  right: 0px;
+  top: 58px;
+  background-color: #00294c;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+}

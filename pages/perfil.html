@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil</title>
     <link rel="stylesheet" type="text/css" href="../css/style_perfil.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style_navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +14,26 @@
     />
   </head>
   <body>
+    <header>
+      <nav>
+        <i class="totoences" id="nav_logo">ToToences</i>
+        <div class="mobile-menu" id="btn_open_menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list" id="list_menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="/">Ranking Geral</a></li>
+          <li><a href="/">Eventos</a></li>
+        </ul>
+      </nav>
+
+      <script src="../js/function_click_navbar.js"></script>
+    </header>
+
     <main>
-      <div class="header">
+      <div class="header-perfil">
         <div class="perfil-img">
           <img
             src="../assets/Images/perfil-img/perfil_7.jpg"
@@ -27,7 +46,7 @@
       </div>
       <div class="main-container">
         <div class="data-group">
-          <div class="info-player"id="container-box">
+          <div class="info-player" id="container-box">
             <h3>Informações</h3>
             <p>
               Idade: <br />
