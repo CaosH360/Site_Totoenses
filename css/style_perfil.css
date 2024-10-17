@@ -1,5 +1,5 @@
 body {
-  background: url(../assets/Images/background/background_2.jpeg) no-repeat
+  background: url(../assets/Images/background/background_2.jpg) no-repeat
     center center;
   background-size: cover;
   background-clip: padding-box;
@@ -26,14 +26,14 @@ main {
   display: flex;
   flex-direction: column 5fr;
   flex-wrap: wrap;
-  background: url(../assets/Images/banner_perfil/BANNER_TOTO_7.png) no-repeat
+  background: url(../assets/Images/banner_perfil/BANNER_TOTO_3.png) no-repeat
     center center;
   background-size: cover;
   width: 100vw;
   height: 40vh;
   max-height: 50vh;
-  border-bottom: 5px solid #ffffff;
-  border-top: 5px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
 }
 
 .header-perfil .perfil-img {
@@ -55,6 +55,8 @@ main {
   color: #ffffff;
   text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
     -1px -1px 0px #7c7c7c;
+    left: 15vw;
+    top: 20vh;
   }
 
   .header-perfil .info-nick::after {
@@ -62,6 +64,7 @@ main {
   display: block;
   width: 15rem;
   height: 0.3rem;
+  top: 70px;
   background-color: #ff7f0f;
   margin: 0 auto;
   position: absolute;
@@ -69,10 +72,13 @@ main {
 }
 
 .main-container {
-  padding: 100px 100px;
   background: #1f3b53c9; 
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  width: 98vw;
+  height: 60vh;
+  border-radius: 10px;
+  
 }
 
 
@@ -81,18 +87,32 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+  text-align: left;
+  text-indent: 10px;
+  margin: 20px;
+  margin-left: 50px;
+}
+
+.data-group h3 {
+  margin-left: 10px;
 }
 
 
-#container-box {
-  height: 200px;
-  width: 200px;
+.container-box {
+  height:200px;
+  width: 300px;
   background: #e05a00a8;
 }
 
-.info-player {
+#info-player{
   flex-basis: 300px;
-  height: 200px;
+  height: 400px;
+  margin-right: 70px;
+  position: absolute;
+  margin-left: 0px;
+
 }
+
+
 
 
