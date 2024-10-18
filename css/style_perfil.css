@@ -49,14 +49,14 @@ main {
 }
 
 .header-perfil .info-nick {
-  margin-left: 60vw;
+  margin-left: 50vw;
   position: absolute;
   margin-top: 7rem;
   color: #ffffff;
   text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
     -1px -1px 0px #7c7c7c;
     left: 15vw;
-    top: 20vh;
+    top: 15vh;
   }
 
   .header-perfil .info-nick::after {
@@ -76,9 +76,8 @@ main {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   width: 98vw;
-  height: 60vh;
+  height: 70vh;
   border-radius: 10px;
-  
 }
 
 
@@ -89,12 +88,13 @@ main {
   gap: 10px;
   text-align: left;
   text-indent: 10px;
-  margin: 20px;
+  margin: 10px;
   margin-left: 50px;
 }
 
 .data-group h3 {
   margin-left: 10px;
+  
 }
 
 
@@ -102,17 +102,38 @@ main {
   height:200px;
   width: 300px;
   background: #e05a00a8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  font-weight: 500;
+  font-size: larger;
 }
 
 #info-player{
   flex-basis: 300px;
-  height: 400px;
+  height: 415px;
   margin-right: 70px;
   position: absolute;
   margin-left: 0px;
 
 }
 
+#matches-played {
+  margin-left: 400px;
+}
+
+#gols {
+  margin-left: 100px;
+
+}
+
+#victorys {
+  margin-left: 400px;
+
+}
+
+#rank {
+  margin-left: 100px; 
+}
 
 
 
