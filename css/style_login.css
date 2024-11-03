@@ -161,6 +161,31 @@ body {
   color: #001d36;
 }
 
+/* Para telas de 1920x1080 */
+@media (min-width: 1920px) {
+  body {
+      font-size: 22px;
+  }
+  .container {
+      padding-inline: 80px;
+  }
+}
+
+/* Para telas de 1366x768 */
+@media (min-width: 1366px) and (max-width: 1919px) {
+  body {
+      font-size: 18px;
+  }
+  .container {
+      padding-inline: 15vw;
+      margin-inline: 5vw;
+      margin-block: 5vh;
+  }
+  .container input {
+    padding-inline: 40px;
+  }
+}
+
 /* Para tablets com 768x1024 */
 @media (min-width: 768px) and (max-width: 1365px) {
   body {
@@ -174,6 +199,9 @@ body {
 
   .input-box label {
     font-size: 1.9rem;
+  }
+  .container input {
+    max-width: 100%;
   }
 }
 

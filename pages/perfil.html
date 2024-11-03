@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil</title>
+    <link rel="stylesheet" type="text/css" href="../assets/library/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style_perfil.css" />
     <link rel="stylesheet" type="text/css" href="../css/style_navbar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,24 +49,31 @@
         <div class="data-group">
           <div class="container-box" id="info-player">
             <h3>Informações</h3>
-            <p>Idade:</p>
-            <p>Sexo:</p>
-            <p>Especialidade:</p>
+              <div class="row" id="informacoes-player">
+                <p class="col" >Idade: <div class="col" id="idade-value">5</div> </p>
+                <p class="col">Sexo:<div class="col" id="Sexo-value">Male</div></p>
+                <p class="col">Especialidade:<div class="col" id="Especialidade-value">Atack</div></p>
+              </div>
           </div>
           <div class="container-box" id="matches-played">
             <h3>Partidas Jogadas</h3>
+            <div class="data" id="match-played">5</div>
           </div>
           <div class="container-box" id="gols">
             <h3>Gols</h3>
+            <div class="data" id="gols-marked">5</div>
           </div>
           <div class="container-box" id="victorys">
             <h3>Vitorias</h3>
+            <div class="data" id="win">5</div>
           </div>
           <div class="container-box" id="rank">
             <h3>Rank</h3>
+            <div class="data" id="patent">5</div>
           </div>
         </div>
       </div>
     </main>
   </body>
+  <script src="../assets/library/bootstrap.bundle.min.js"></script>
 </html>

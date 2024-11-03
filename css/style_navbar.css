@@ -111,7 +111,7 @@ header {
         position: fixed;
         top: 8vh;
         right: 0;
-        width: 20vw;
+        width: 30vw;
         height: 150vh;
         background: #00294c;
         display: flex;
@@ -122,9 +122,10 @@ header {
         opacity: 0;
         transition: transform 0.3s ease-in, opacity 0.3s ease-in;
         z-index: 10;
-        font-size: 10px;
+        font-size: 25px;
         font-family: "Poppins";
         text-align: left;
+        list-style-type: none;
       }
     }
   }
