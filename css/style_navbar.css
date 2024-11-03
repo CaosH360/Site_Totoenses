@@ -61,6 +61,7 @@ header {
     font-size: 20px;
     font-family: "Poppins";
     border-left: 2px solid #ffffff;
+    list-style-type: none;
   }
 
   .nav-list.active {
