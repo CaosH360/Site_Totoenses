@@ -132,19 +132,5 @@ main {
 /* Responsividade para dispositivos pequenos (celulares) */
 @media (max-width: 767px) {
 
-  .main-container {
-    width: 98vw;
-    height: 100%;
-  }
 
-  .container-box {
-    height: 100px;
-    width: 300px;
-  }
-
-  #info-player{
-    height: 300px;
-    width: 300px;
-    font-size: 20px;
-  }
 }
