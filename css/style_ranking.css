@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url(../assets/Images/background/background_1.jpeg) center;
+  background-size: cover;
+  background-clip: padding-box;
+  color: #f0f0f0;
+  display: block;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+/* Container Principal */
+.container {
+  max-width: 1200px;
+  padding: 30px;
+  width: 100%;
+  height: 70vh;
+  background: #1f3b538e; 
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(17, 0, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+nav button {
+  padding: 10px 20px;
+  background-color: #f1a035;
+  color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+nav button:hover {
+  background-color: #243270;
+  transition: 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+/* Conteúdo das Abas */
+.tab-content {
+  display: none;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Tabela de Ranking */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #2a326379;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #814500;
+}
+
+tr:nth-child(even) {
+  background-color: #ff880073;
+}
+
+.highlight {
+  background-color: #ffcc00; 
+  font-weight: bold;
+  color: #1f1f1f; 
+}
+#userInfoSection {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: #2a326379;
+}
+
+#userForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#userForm input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 15px;
+  border: 1px solid #121641;
+  text-align: center;
+  font-size: 22px;
+}
+
+#userForm input:hover {
+  background-color: #ffe3b8;
+  transition: 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+
+.data-button {
+  background-color: #f1a035;
+  color: #ffffff;
+  padding: 8px;
+  padding-inline: 15px;
+  margin: 10px;
+  border: solid 1px #121641;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.data-button:hover {
+  background-color: #185dad;
+  transition: 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  th,
+  td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  nav button {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+}

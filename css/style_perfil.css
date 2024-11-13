@@ -1,8 +1,9 @@
 body {
   background: url(../assets/Images/background/background_2.jpg) no-repeat
     center center;
-  background-size: cover cover;
+  background-size: cover;
   background-clip: padding-box;
+  width: 100%;
 }
 
 main {
@@ -76,25 +77,19 @@ main {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   width: 98vw;
-  height: 70vh;
+  height: 80vh;
   border-radius: 10px;
 }
 
-
 .data-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
   text-align: left;
   text-indent: 10px;
-  margin: 10px;
-  margin-left: 50px;
+  margin-left: 20px;
+  width: 100%;
 }
 
 .data-group h3 {
   margin-left: 10px;
-  
 }
 
 
@@ -107,56 +102,21 @@ main {
   font-weight: 500;
   font-size: larger;
   box-shadow: #00000094 -3px 3px 3px;
+  margin: 20px;
 }
 
 #info-player{
   flex-basis: 350px;
-  height: 415px;
-  margin-right: 70px;
-  position: absolute;
+  height: 440px;
+  position: relative;
   margin-left: 0px;
   font-size: 20px;
 }
 
+
+
 /* Para telas de 1366x768 */
 @media (min-width: 1366px) and (max-width: 1919px) {
-
-
-  .container-box {
-    height:200px;
-    width: 350px;
-    background: #e05a00a8;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-    font-weight: 500;
-    font-size: larger;
-  }
-
-  #info-player{
-    flex-basis: 300px;
-    height: 415px;
-    margin-right: 70px;
-    position: absolute;
-    margin-left: 0px;
-  }
-  
-  #matches-played {
-    margin-left: 400px;
-  }
-  
-  #gols {
-    margin-left: 100px;
-  
-  }
-  
-  #victorys {
-    margin-left: 400px;
-  
-  }
-  
-  #rank {
-    margin-left: 100px; 
-  }
 
   .data {
     font-size: 50px;
@@ -167,126 +127,24 @@ main {
 /* Responsividade para dispositivos médios (tablets) */
 @media (min-width: 768px) and (max-width: 1365px) {
 
-  .header-perfil .info-nick {
-    margin-left: 50vw;
-      left: 15vw;
-      top: 27vh;
-    }
-  
-    .header-perfil .info-nick::after {
-    width: 13rem;
-    height: 0.3rem;
-    top: 70px;}
-
-  .data-group {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .container-box {
-    height:150px;
-    width: 316px;
-    justify-content: center;
-
-  }
-
-  #info-player{
-    flex-basis: 650px;
-    height: 270px;
-    position: relative;
-    margin-top: 10px;
-  }
-
-
-  
-  #matches-played {
-    margin-left: 0;
-  }
-  
-  #gols {
-    margin-left: 0;
-  
-  }
-  
-  #victorys {
-    margin-left: 0;
-  
-  }
-  
-  #rank {
-    margin-left: 0; 
-  }
 }
 
 /* Responsividade para dispositivos pequenos (celulares) */
 @media (max-width: 767px) {
-  .header-perfil {
-    height: 25vh;
-    width: 100%;
-  }
-
-  .header-perfil .perfil-img img {
-    width: 50vw;
-    max-width: 100px;
-    height: 140px;
-  }
-
-  .header-perfil .info-nick {
-    margin-left: 50vw;
-      left: 15vw;
-      top: 5vh;
-    }
-  
-    .header-perfil .info-nick::after {
-    width: 13rem;
-    height: 0.3rem;
-    top: 70px;}
-
 
   .main-container {
-      width: 100%;
-      height: 100vh;
-    }
-
-  .data-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 98vw;
+    height: 100%;
   }
 
-
   .container-box {
-    height:100px;
+    height: 100px;
     width: 300px;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 15px;
   }
 
   #info-player{
-    position: relative;
-    flex-basis: 170px;
-  }
-  
-  #matches-played {
-    margin-left: 0;
-  }
-  
-  #gols {
-    margin-left: 0;
-  
-  }
-  
-  #victorys {
-    margin-left: 0;
-  
-  }
-  
-  #rank {
-    margin-left: 0; 
-  }
-
-  .data {
-    font-size: 35px;
+    height: 300px;
+    width: 300px;
+    font-size: 20px;
   }
 }

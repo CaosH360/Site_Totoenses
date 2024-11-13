@@ -84,7 +84,7 @@ header {
     position: relative;
     left: 45vw;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 0px;
   }
 
   .mobile-menu div {
@@ -93,7 +93,7 @@ header {
     background: #fff;
     margin: 8px;
     position: relative;
-    margin-top: 2px;
+    margin-top: 0px;
     right: 13px;
   }
   
@@ -129,4 +129,5 @@ header {
         list-style-type: none;
       }
     }
+
   }
