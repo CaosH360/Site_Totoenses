@@ -32,6 +32,8 @@ body {
   flex-wrap: wrap;
 }
 
+
+
 .form {
   width: 100%;
   display: flex;
@@ -141,7 +143,7 @@ body {
   background-color: #d86500;
 }
 
-.continue-button button a {
+.continue-button button {
   text-decoration: none;
   font-size: large;
   font-weight: 500;
@@ -152,7 +154,7 @@ body {
   cursor: pointer;
   font-size: 25px;
   position: absolute;
-  right: 20%;
+  right: 28%;
   margin-top: 25px;
   color: #003b6e;
 }
@@ -168,6 +170,12 @@ body {
   }
   .container {
       padding-inline: 80px;
+      padding-inline: 15vw;
+      margin-inline: 5vw;
+      margin-block: 5vh;
+  }
+  .container input {
+    padding-inline: 40px;
   }
 }
 
@@ -180,9 +188,6 @@ body {
       padding-inline: 15vw;
       margin-inline: 5vw;
       margin-block: 5vh;
-  }
-  .container input {
-    padding-inline: 40px;
   }
 }
 

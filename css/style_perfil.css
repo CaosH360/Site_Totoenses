@@ -1,66 +1,73 @@
 body {
-  background: url(../assets/Images/background/background_2.jpg) no-repeat
-    center center;
+  background: url(../assets/Images/background/background_2.jpg) no-repeat center;
   background-size: cover;
-  background-clip: padding-box;
   width: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 main {
+  min-height: 100vh;
   width: 100%;
-  height: 100vh;
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgba(255, 174, 0, 0.356);
+  height: 36vh;
+  width: 100%;
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  font-family: 'Poppins';
-  color: #ffffff;
-  text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
-    -1px -1px 0px #7c7c7c;
-    letter-spacing: 0.2rem;
-    z-index: 1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.header-perfil {
-  display: flex;
-  flex-direction: column 5fr;
-  flex-wrap: wrap;
-  background: url(../assets/Images/banner_perfil/BANNER_TOTO_3.png) no-repeat
-    center center;
-  background-size: cover;
-  width: 100vw;
-  height: 40vh;
-  max-height: 50vh;
-  border-bottom: 3px solid #ffffff;
-  border-top: 3px solid #ffffff;
+.banner-perfil {
+  position: absolute;
+  width: 10vw;
+  height: 100vh;
+  z-index: 1;
 }
 
-.header-perfil .perfil-img {
-  margin-right: 20vw;
-  margin: 15px;
-  margin-left: 7vw;
-}
-
-.header-perfil .perfil-img img {
+.banner-perfil img {
+  width: 80vw;
   height: 35vh;
-  border: 3px solid #e05a00;
-  border-radius: 30px;
+  margin: 0 auto;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.header-perfil .info-nick {
-  margin-left: 50vw;
+.perfil-img {
+  z-index: 2;
+}
+
+.perfil-img img {
+  height: 30vh;
+  margin: 20px;
+  border: 5px solid #003f91;
+  border-radius: 15px;
+}
+
+.nickname {
+  margin-left: 52vw;
   position: absolute;
   margin-top: 7rem;
   color: #ffffff;
   text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
     -1px -1px 0px #7c7c7c;
-    left: 15vw;
-    top: 15vh;
-  }
+  left: 18vw;
+  top: 10vh;
+  font-size: 50px;
+  z-index: 2;
+}
 
-  .header-perfil .info-nick::after {
+.nickname::after {
   content: "";
   display: block;
   width: 15rem;
@@ -72,65 +79,241 @@ main {
   border-radius: 10px;
 }
 
-.main-container {
-  background: #1f3b53c9; 
+.conteudo {
+  flex-grow: 1;
+  margin-block: 5px;
+  width: 100%;
+  background-color: rgba(0, 136, 255, 0.356);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  width: 98vw;
-  height: 80vh;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
-.data-group {
-  text-align: left;
-  text-indent: 10px;
-  margin-left: 20px;
-  width: 100%;
-}
-
-.data-group h3 {
-  margin-left: 10px;
-}
-
-
-.container-box {
-  height:200px;
-  width: 350px;
+.principal-info {
+  height: 455px;
   background: #e05a00a8;
   border-radius: 10px;
   border: 3px solid #ffffff;
   font-weight: 500;
-  font-size: larger;
+  font-size: 28px;
   box-shadow: #00000094 -3px 3px 3px;
-  margin: 20px;
+  color: #ffffff;
 }
 
-#info-player{
-  flex-basis: 350px;
-  height: 440px;
-  position: relative;
-  margin-left: 0px;
-  font-size: 20px;
+.gols {
+  height: 220px;
+  background: #e05a00a8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  font-weight: 500;
+  font-size: 50px;
+  box-shadow: #00000094 -3px 3px 3px;
+  color: #ffffff;
+  text-align: center;
 }
 
+.victorys {
+  height: 220px;
+  background: #e05a00a8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  font-weight: 500;
+  font-size: 50px;
+  box-shadow: #00000094 -3px 3px 3px;
+  color: #ffffff;
+  text-align: center;
+}
 
+.partidas-jogadas {
+  height: 220px;
+  background: #e05a00a8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  font-weight: 500;
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: #00000094 -3px 3px 3px;
+}
+
+.rank {
+  height: 220px;
+  background: #e05a00a8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  font-weight: 500;
+  font-size: 50px;
+  color: #ffffff;
+  box-shadow: #00000094 -3px 3px 3px;
+  text-align: center;
+}
 
 /* Para telas de 1366x768 */
 @media (min-width: 1366px) and (max-width: 1919px) {
-
-  .data {
-    font-size: 50px;
-  }
 
 }
 
 /* Responsividade para dispositivos médios (tablets) */
 @media (min-width: 768px) and (max-width: 1365px) {
+  body {
+    width: 100%;
+    background-size: cover;
+  }
 
+  .header {
+    height: 26vh;
+  }
+
+  .banner-perfil img {
+    width: 88vw;
+    height: 25vh;
+    margin: 0 auto;
+  }
+
+  .perfil-img img {
+    height: 23vh;
+    margin: 7px;
+    border: 5px solid #003f91;
+    border-radius: 15px;
+  }
+
+  .nickname {
+    margin-top: 7rem;
+    left: 20vw;
+    top: 0vh;
+    font-size: 25px;
+  }
+
+  .nickname::after {
+    width: 9rem;
+    top: 40px;
+  }
+
+  .conteudo {
+    margin-block: 7px;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .principal-info {
+    height: 200px;
+    font-weight: 500;
+    font-size: 28px;
+    margin-inline: 10px;
+    width: 678px;
+    margin-top: 10px;
+
+  }
+
+  .gols {
+    height: 160px;
+    width: 135px;
+    margin-inline: 10px;
+    margin-block: 10px;
+    font-size: 30px;
+  }
+
+  .victorys {
+    height: 160px;
+    width: 145px;
+    margin-inline: 10px;
+    margin-block: 10px;
+    font-size: 30px;
+  }
+
+  .partidas-jogadas {
+    height: 160px;
+    width: 145px;
+    margin-inline: 10px;
+    margin-block: 10px;
+    font-size: 30px;
+  }
+
+  .rank {
+    height: 160px;
+    width: 135px;
+    margin-inline: 10px;
+    margin-block: 10px;
+    font-size: 30px;
+  }
 }
 
 /* Responsividade para dispositivos pequenos (celulares) */
 @media (max-width: 767px) {
+  body {
+    width: 150%;
+    background-size: cover;
+  }
 
+  .header {
+    height: 26vh;
+  }
 
+  .banner-perfil img {
+    width: 135vw;
+    height: 25vh;
+    margin: 0 auto;
+  }
+
+  .perfil-img img {
+    height: 23vh;
+    margin: 7px;
+    border: 5px solid #003f91;
+    border-radius: 15px;
+  }
+
+  .nickname {
+    margin-top: 7rem;
+    left: 30vw;
+    top: 0vh;
+    font-size: 25px;
+  }
+
+  .nickname::after {
+    width: 10rem;
+    top: 50px;
+  }
+
+  .conteudo {
+    margin-block: 7px;
+    width: 100%;
+    height: 105vh;
+  }
+
+  .principal-info {
+    height: 200px;
+    font-weight: 500;
+    font-size: 28px;
+    margin-inline: 10px;
+    width: 425px;
+
+  }
+
+  .gols {
+    height: 160px;
+    width: 200px;
+    margin-inline: 10px;
+    margin-block: 10px;
+  }
+
+  .victorys {
+    height: 160px;
+    width: 200px;
+    margin-inline: 10px;
+    margin-block: 10px;
+  }
+
+  .partidas-jogadas {
+    height: 160px;
+    width: 200px;
+    margin-inline: 10px;
+    margin-block: 10px;
+  }
+
+  .rank {
+    height: 160px;
+    width: 200px;
+    margin-inline: 10px;
+    margin-block: 10px;
+  }
 }
