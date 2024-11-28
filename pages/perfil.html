@@ -56,6 +56,12 @@
         </div>
         <div class="nickname">Nickname</div>
       </div>
+
+        <!-- Botão para editar informações -->
+  <div class="text-center my-3">
+    <button id="btnEditProfile" class="btn btn-primary">Editar Perfil</button>
+  </div>
+
       <div class="conteudo container">
         <div class="row">
           <div class="principal-info col-lg-4 mx-lg-3 my-lg-2">
@@ -93,6 +99,50 @@
         </div>
       </div>
     </main>
+
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProfileLabel">Editar Perfil</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="editProfileForm">
+              <div class="mb-3">
+                <label for="nickname" class="form-label">Nickname</label>
+                <input type="text" class="form-control" id="nickname" />
+              </div>
+              <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" />
+              </div>
+              <div class="mb-3">
+                <label for="sexo" class="form-label">Sexo</label>
+                <select id="sexo" class="form-select">
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="especialidade" class="form-label">Especialidade</label>
+                <select id="especialidade" class="form-select">
+                  <option value="Atacante">Atacante</option>
+                  <option value="Defensor">Defensor</option>
+                  <option value="Goleiro">Ambos</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" id="saveProfileBtn" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../assets/library/bootstrap.bundle.min.js"></script>
+    <script src="../js/function_perfil.js"></script>
   </body>
 </html>
