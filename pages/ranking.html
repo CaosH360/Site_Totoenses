@@ -43,11 +43,10 @@
                 <th>Posição</th>
                 <th>Jogador</th>
                 <th>V por G</th>
+                <th>Rank</th>
               </tr>
             </thead>
-            <tbody id="rankingBodyVporG">
-              <!-- Dados dos jogadores de Multijogador serão inseridos aqui -->
-            </tbody>
+            <tbody id="rankingBodyVporG"></tbody>
           </table>
         </div>
 
@@ -57,23 +56,17 @@
             <label for="userName">Nome:</label>
             <input type="text" id="userName" name="userName" required />
             <label for="userVictories">Vitórias:</label>
-            <input
-              type="number"
-              id="userVictories"
-              name="userVictories"
-              required
-            />
+            <input type="number" id="userVictories" name="userVictories" required />
             <label for="userGoals">Gols:</label>
             <input type="number" id="userGoals" name="userGoals" required />
             <button type="submit" class="data-button">Salvar</button>
-            <button type="button" class="data-button" id="showUserInfoButton">
-              Mostrar Informações
-            </button>
+            <button type="button" class="data-button" id="showUserInfoButton">Mostrar Informações</button>
           </form>
-          <div id="userDataDisplay" style="margin-top: 15px; display: none">
-            <h4>Dados do Usuário:</h4>
+          
+          <div id="userDataDisplay" style="display: none;">
             <p id="userDataText"></p>
           </div>
+          
         </div>
       </div>
 

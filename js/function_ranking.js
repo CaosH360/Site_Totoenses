@@ -1,88 +1,126 @@
-// Dados fictícios dos jogadores para cada seção
-const jogadoresVporG = [
-    { nome: 'Jogador 1', vitórias: 94, gols: 76 },
-    { nome: 'Jogador 2', vitórias: 81, gols: 71 },
-    { nome: 'Jogador 3', vitórias: 77, gols: 43 },
-    { nome: 'Jogador 4', vitórias: 65, gols: 80 },
-];
-
-// Função para calcular Vitorias por Gol
-function calcularVporG(vitorias, gols) {
-    return gols > 0 ? ((vitorias * 0.7) + (gols * 0.5)).toFixed(2) : 0; 
-}
-
-// Função para atualizar o ranking de uma aba específica
-function atualizarRanking(jogadores, rankingBodyId) {
-    jogadores.sort((a, b) => calcularVporG(b.vitórias, b.gols) - calcularVporG(a.vitórias, a.gols));
-
-    const rankingBody = document.getElementById(rankingBodyId);
-    rankingBody.innerHTML = ''; 
-    
-
-    // Garantir que os jogadores fiquem com a posição correta
-    jogadores.forEach((jogador, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${jogador.nome}</td>
-            <td>${calcularVporG(jogador.vitórias, jogador.gols)}</td>
-        `;
-        rankingBody.appendChild(row);
+const jogadoresFakes = [
+    { nickname: "Jogador1", victorys: 20, gols: 25, rank: "Bronze" },
+    { nickname: "Jogador2", victorys: 15, gols: 36, rank: "Prata" },
+    { nickname: "Darkness", victorys: 20, gols: 15, rank: "Bronze" },
+    { nickname: "kaiser", victorys: 60, gols: 40, rank: "Ouro" },
+    { nickname: "Jogador5", victorys: 27, gols: 17, rank: "Bronze" },
+    { nickname: "Estrela", victorys: 40, gols: 30, rank: "Prata" },
+    { nickname: "Rei do Toto", victorys: 500, gols: 450, rank: "Lenda" },
+  ];
+  
+  const getUserData = () => {
+    const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
+    return dadosUsuario;
+  };
+  
+  const atualizarRanking = () => {
+    const rankingBody = document.getElementById("rankingBodyVporG");
+  
+    // Recuperar os dados do usuário
+    const dadosUsuario = getUserData();
+  
+    // Combinar jogadores fictícios com o jogador real
+    const jogadores = [...jogadoresFakes];
+  
+    if (dadosUsuario.nickname && dadosUsuario.victorys && dadosUsuario.gols) {
+      jogadores.push({
+        nickname: dadosUsuario.nickname,
+        victorys: parseInt(dadosUsuario.victorys),
+        gols: parseInt(dadosUsuario.gols),
+        rank: dadosUsuario.rank || "Bronze",
+      });
+    }
+  
+    // Calcular o ratio (Vitória por Gol) e ordenar os jogadores
+    jogadores.forEach((jogador) => {
+      jogador.ratio = ((jogador.victorys * 0.7) / (jogador.gols * 0.5)).toFixed(2);
     });
-}
-
-function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    const activeTab = document.getElementById(tabId);
-    activeTab.classList.add('active');
-
-    // Atualiza o ranking da aba ativa
-    if (tabId === 'VporG') {
-        atualizarRanking(jogadoresVporG, 'rankingBodyVporG');
-    } else if (tabId === 'userInfoSection') {
+  
+    jogadores.sort((a, b) => b.ratio - a.ratio);
+  
+    // Limpar a tabela
+    rankingBody.innerHTML = "";
+  
+    // Adicionar os jogadores ao ranking
+    jogadores.forEach((jogador, index) => {
+      const isUser = jogador.nickname === dadosUsuario.nickname; // Verifica se é o jogador do localStorage
+      const row = `
+        <tr class="${isUser ? "highlight" : ""}">
+          <td>${index + 1}</td>
+          <td>${jogador.nickname}</td>
+          <td>${isNaN(jogador.ratio) ? "N/A" : jogador.ratio}</td>
+          <td>${jogador.rank}</td>
+        </tr>
+      `;
+      rankingBody.innerHTML += row;
+    });
+  };
+  
+  
+  const salvarDadosUsuario = (e) => {
+    e.preventDefault();
+  
+    const userName = document.getElementById("userName").value.trim();
+    const userVictories = document.getElementById("userVictories").value.trim();
+    const userGoals = document.getElementById("userGoals").value.trim();
+  
+    if (!userName || !userVictories || !userGoals) {
+      alert("Preencha todos os campos antes de salvar.");
+      return;
     }
-}
-
-// Inicializador do ranking na aba VporG
-atualizarRanking(jogadoresVporG, 'rankingBodyVporG');
-
-// Variável global para armazenar o jogador atual
-let usuarioAtual = null;
-
-document.getElementById('userForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nomeUsuario = document.getElementById('userName').value;
-    const vitoriasUsuario = parseInt(document.getElementById('userVictories').value, 10);
-    const golsUsuario = parseInt(document.getElementById('userGoals').value, 10);
-
-    // Verifica se o jogador já existe baseado no nome
-    const jogadorExistente = jogadoresVporG.find(jogador => jogador.nome === nomeUsuario);
-
-    if (jogadorExistente) {
-        // Atualiza as vitórias e gols do jogador existente
-        jogadorExistente.vitórias = vitoriasUsuario;
-        jogadorExistente.gols = golsUsuario;
-        usuarioAtual = jogadorExistente; // Atualiza o usuário atual
+  
+    const dadosUsuario = getUserData();
+    dadosUsuario.nickname = userName;
+    dadosUsuario.victorys = parseInt(userVictories);
+    dadosUsuario.gols = parseInt(userGoals);
+  
+    if (dadosUsuario.victorys > 50) {
+      dadosUsuario.rank = "Lenda";
+    } else if (dadosUsuario.victorys > 30) {
+      dadosUsuario.rank = "Ouro";
+    } else if (dadosUsuario.victorys > 20) {
+      dadosUsuario.rank = "Prata";
     } else {
-        // Adiciona um novo jogador se não existir
-        const novoJogador = { nome: nomeUsuario, vitórias: vitoriasUsuario, gols: golsUsuario };
-        jogadoresVporG.push(novoJogador);
-        usuarioAtual = novoJogador; // Define o novo jogador como usuário atual
+      dadosUsuario.rank = "Bronze";
     }
-
-    // Atualize o ranking após a inserção ou alteração
-    atualizarRanking(jogadoresVporG, 'rankingBodyVporG');
-});
-
-// Lógica para mostrar as informações do usuário
-document.getElementById('showUserInfoButton').addEventListener('click', function() {
-    if (usuarioAtual) {
-        const userDataText = document.getElementById('userDataText');
-        userDataText.textContent = `Nome: ${usuarioAtual.nome}, Vitórias: ${usuarioAtual.vitórias}, Gols: ${usuarioAtual.gols}`;
-        document.getElementById('userDataDisplay').style.display = 'block'; // Exibe as informações
+  
+    localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+  
+    atualizarRanking();
+  
+    alert("Dados do usuário atualizados com sucesso!");
+  };
+  
+  const mostrarInfoUsuario = () => {
+    const userDataDisplay = document.getElementById("userDataDisplay");
+    const userDataText = document.getElementById("userDataText");
+  
+    const dadosUsuario = getUserData();
+  
+    if (dadosUsuario.nickname && dadosUsuario.victorys && dadosUsuario.gols) {
+      userDataText.innerHTML = `
+        <strong>Nome:</strong> ${dadosUsuario.nickname}<br>
+        <strong>Vitórias:</strong> ${dadosUsuario.victorys}<br>
+        <strong>Gols:</strong> ${dadosUsuario.gols}<br>
+        <strong>Rank:</strong> ${dadosUsuario.rank || "Bronze"}
+      `;
+      userDataDisplay.style.display = "block";
     } else {
-        alert('Nenhum dado do usuário encontrado. Por favor, salve primeiro.');
+      alert("Nenhum dado encontrado para exibir.");
+      userDataDisplay.style.display = "none";
     }
-});
+  };
+  
+  const showTab = (tabId) => {
+    const tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach((tab) => tab.classList.remove("active"));
+  
+    document.getElementById(tabId).classList.add("active");
+  };
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    atualizarRanking();
+    document.getElementById("userForm").addEventListener("submit", salvarDadosUsuario);
+    document.getElementById("showUserInfoButton").addEventListener("click", mostrarInfoUsuario);
+  });
+  

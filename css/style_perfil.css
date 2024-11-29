@@ -1,5 +1,5 @@
 body {
-  background: url(../assets/Images/background/background_2.jpg) no-repeat center;
+  background: url(../assets/Images/background/background_2.jpg) no-repeat center fixed;
   background-size: cover;
   width: 100%;
 }
@@ -79,6 +79,7 @@ main {
   border-radius: 10px;
 }
 
+
 .conteudo {
   flex-grow: 1;
   margin-block: 5px;
@@ -148,10 +149,12 @@ main {
   text-align: center;
 }
 
-/* Para telas de 1366x768 */
-@media (min-width: 1366px) and (max-width: 1919px) {
-
+#btnEditProfile {
+  padding-inline: 40px;
+  display: flex;
 }
+
+
 
 /* Responsividade para dispositivos médios (tablets) */
 @media (min-width: 768px) and (max-width: 1365px) {
@@ -243,6 +246,7 @@ main {
   body {
     width: 150%;
     background-size: cover;
+    background-clip: padding-box;
   }
 
   .header {
@@ -277,7 +281,7 @@ main {
   .conteudo {
     margin-block: 7px;
     width: 100%;
-    height: 105vh;
+    height: 85vh;
   }
 
   .principal-info {
