@@ -154,10 +154,85 @@ main {
   display: flex;
 }
 
+h1 {
+  color: #006eff;
+  text-shadow: 1px 1px 1px #f7f7f7, -1px 1px 1px #ffffff, 1px -1px 1px #ffffff,
+  -1px -1px 1px #ffffff;
+}
+
+h3 {
+  color: #006eff;
+  text-shadow: 1px 1px 1px #f7f7f7, -1px 1px 1px #ffffff, 1px -1px 1px #ffffff,
+  -1px -1px 1px #ffffff;
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+
+
+  .header {
+    height: 26vh;
+  }
+
+  .banner-perfil img {
+    width: 88vw;
+    height: 25vh;
+    margin: 0 auto;
+  }
+
+  .perfil-img img {
+    height: 23vh;
+    margin: 7px;
+    border: 5px solid #003f91;
+    border-radius: 15px;
+  }
+
+  .conteudo {
+    margin-block: 7px;
+    height: 80vh;
+  }
+
+  .principal-info {
+    height: 435px;
+    font-weight: 500;
+    font-size: 20px;
+    width: 310px;
+    margin-top: 10px;
+    
+  }
+
+  .principal-info h3 {
+    font-size: 23px;
+  }
+
+  .gols {
+    height: 210px;
+    width: 200px;
+    font-size: 35px;
+  }
+
+  .victorys {
+    height: 210px;
+    width: 200px;
+    font-size: 35px;
+  }
+
+  .partidas-jogadas {
+    height: 210px;
+    width: 200px;
+
+    font-size: 35px;
+  }
+
+  .rank {
+    height: 210px;
+    width: 200px;
+    font-size: 35px;
+  }
+}
 
 
 /* Responsividade para dispositivos médios (tablets) */
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body {
     width: 100%;
     background-size: cover;

@@ -15,7 +15,7 @@ body {
 .container {
   background: #00294c60;
   padding-inline: 60px;
-  height: 140vh;
+  height: 120vh;
   max-width: 60vw;
   border: 2px solid #1f3b53;
   border-radius: 15px;
@@ -209,7 +209,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .container {
-      height: 70vh;
+      height: 130vh;
       max-width: 60vw;
     }
 
