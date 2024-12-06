@@ -167,6 +167,10 @@ nav{
   color: #1a2b48;
 }
 
+#btns:hover {
+  background-color: #f39a00;
+}
+
 #nav_logo {
   border-bottom: 3px solid #ffffff; 
   padding: 10px; 
@@ -276,11 +280,11 @@ textarea {
   margin-bottom: 15px;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding-bottom: 10px; /* Para evitar corte visual das imagens */
+  padding-bottom: 10px; 
 }
 
 #imageGallery::-webkit-scrollbar {
-  display: none; /* Oculta o scrollbar */
+  display: none; 
 }
 
 .gallery-image {
@@ -295,7 +299,7 @@ textarea {
 
 .gallery-image:hover {
   transform: scale(1.1);
-  border-color: #fcb24a; /* Destacar no hover */
+  border-color: #fcb24a; 
 }
 
 #imagePreview {
@@ -310,3 +314,39 @@ textarea {
   border-radius: 4px;
 }
 
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .row {
+    width: 100vw;
+    position: relative;
+    right: 0px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .row {
+    width: 100vw;
+    position: relative;
+    right: 0px;
+  } 
+
+
+
+}
+
+@media (max-width: 767px) {
+  .row {
+    width: 80vw;
+    position: relative;
+    right: 0px;
+  } 
+
+  #btns {
+    margin-inline: 10px;
+    padding-inline: 35px;
+    padding-bottom: 45px;
+    font-size: 15px;
+  }
+
+}
