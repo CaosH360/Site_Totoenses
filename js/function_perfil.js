@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnEditProfile = document.getElementById("btnEditProfile");
   const saveProfileBtn = document.getElementById("saveProfileBtn");
 
-  // Recuperar dados do localStorage ou criar um objeto vazio
   const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {
     nickname: "Nickname",
     idade: "N/A",
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     rank: "bronze",
   };
 
-  // Preencher o perfil com os dados
   const preencherPerfil = () => {
     document.querySelector(".nickname").innerText = dadosUsuario.nickname || "Nickname";
     document.querySelector(".idade").innerText = dadosUsuario.idade || "N/A";
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".rank span").innerText = dadosUsuario.rank || "bronze"; 
   };
 
-  // Preencher o modal com os dados atuais
   const preencherModal = () => {
     document.getElementById("nickname").value = dadosUsuario.nickname || "";
     document.getElementById("idade").value = dadosUsuario.idade || "";
@@ -45,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   saveProfileBtn.addEventListener("click", () => {
-    // Atualizar os valores no objeto `dadosUsuario`
     dadosUsuario.nickname = document.getElementById("nickname").value;
     dadosUsuario.idade = document.getElementById("idade").value;
     dadosUsuario.sexo = document.getElementById("sexo").value;
@@ -54,16 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
     dadosUsuario.victorys = document.getElementById("victorys").value;
     dadosUsuario.partidasJogadas = document.getElementById("partidas-jogadas").value;
 
-    // Salvar os dados atualizados no localStorage
     localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
 
-    // Atualizar o perfil com os novos dados
     preencherPerfil();
 
     const modal = bootstrap.Modal.getInstance(document.getElementById("editProfileModal"));
     modal.hide();
   });
 
-  // Preencher o perfil ao carregar a página
   preencherPerfil();
 });

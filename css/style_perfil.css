@@ -55,9 +55,9 @@ main {
 }
 
 .nickname {
-  margin-left: 52vw;
+  margin-left: 50vw;
   position: absolute;
-  margin-top: 7rem;
+  margin-top: 9rem;
   color: #ffffff;
   text-shadow: 1px 1px 0px #7c7c7c, -1px 1px 0px #7c7c7c, 1px -1px 0px #7c7c7c,
     -1px -1px 0px #7c7c7c;
@@ -185,6 +185,19 @@ h3 {
     border: 5px solid #003f91;
     border-radius: 15px;
   }
+
+  .nickname {
+    margin-top: 9rem;
+    left: 15vw;
+    top: 0vh;
+    font-size: 50px;
+  }
+
+  .nickname::after {
+    width: 13rem;
+    top: 65px;
+  }
+
 
   .conteudo {
     margin-block: 7px;

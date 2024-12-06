@@ -5,7 +5,9 @@ const jogadoresFakes = [
   { nickname: "kaiser", victorys: 60, gols: 40, rank: "Ouro" },
   { nickname: "Namibo", victorys: 27, gols: 17, rank: "Bronze" },
   { nickname: "Estrela", victorys: 40, gols: 30, rank: "Prata" },
-  { nickname: "Rei do Toto", victorys: 300, gols: 900, rank: "Lenda" },
+  { nickname: "Rei do Toto", victorys: 500, gols: 1200, rank: "Lenda" },
+  { nickname: "Caos O criador", victorys: 300, gols: 900, rank: "Lenda" },
+  { nickname: "TH O melhor jogador de toto", victorys: 300, gols: 900, rank: "Lenda" },
 ];
 
 const getUserData = () => {
@@ -18,7 +20,6 @@ const atualizarRanking = () => {
 
   const dadosUsuario = getUserData();
 
-  // Combinar jogadores fictícios com o jogador real
   const jogadores = [...jogadoresFakes];
 
   if (dadosUsuario.nickname && dadosUsuario.victorys && dadosUsuario.gols) {
@@ -30,23 +31,18 @@ const atualizarRanking = () => {
     });
   }
 
-  // Calcular o ratio com parênteses corretos
   jogadores.forEach((jogador) => {
-    jogador.ratio = (((jogador.victorys * 3) + (jogador.gols * 2)) / 50).toFixed(2);
+    jogador.ratio = (((jogador.victorys * 3 + jogador.gols * 2)) / 10).toFixed(2);
   });
 
-  // Ordenar os jogadores com base no ratio
   jogadores.sort((a, b) => b.ratio - a.ratio);
 
-  // Limpar a tabela
+
   rankingBody.innerHTML = "";
 
-  // Adicionar os jogadores ao ranking
   jogadores.forEach((jogador, index) => {
-    // Comparação insensível a maiúsculas/minúsculas e espaços
     const isUser = jogador.nickname.toLowerCase() === dadosUsuario.nickname?.toLowerCase().trim();
 
-    // Adicionar linha à tabela
     const row = `
       <tr class="${isUser ? "highlight" : ""}">
         <td>${index + 1}</td>
@@ -77,7 +73,6 @@ const salvarDadosUsuario = (e) => {
   dadosUsuario.victorys = parseInt(userVictories);
   dadosUsuario.gols = parseInt(userGoals);
 
-  // Atualizar rank do usuário com base nas vitórias
   if (dadosUsuario.victorys > 200) {
     dadosUsuario.rank = "Lenda";
   } else if (dadosUsuario.victorys > 100) {

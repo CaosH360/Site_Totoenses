@@ -54,8 +54,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: baseline;
-    transform: translateX(100%); /* Esconde o menu fora da tela */
-    opacity: 0; /* Invisível no início */
+    transform: translateX(100%); 
+    opacity: 0; 
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     z-index: 10;
     font-size: 20px;
@@ -65,8 +65,8 @@ header {
   }
 
   .nav-list.active {
-    transform: translateX(0); /* Move o menu para dentro da tela */
-    opacity: 1; /* Torna o menu visível */ /* Mostra o elemento */
+    transform: translateX(0); 
+    opacity: 1; 
   }
 
   .nav-list li {
