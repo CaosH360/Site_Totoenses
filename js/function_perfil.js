@@ -60,3 +60,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
   preencherPerfil();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Seletores de imagens e elementos do DOM
+  const perfilImages = document.querySelectorAll("#imageGalleryPerfil .gallery-image");
+  const bannerImages = document.querySelectorAll("#imageGalleryBanner .gallery-image");
+  const perfilPreview = document.getElementById("imagemSelecionadaPerfil");
+  const bannerPreview = document.getElementById("imagemSelecionadaBanner");
+  const saveProfileBtn = document.getElementById("saveProfileBtn");
+  const perfilImgElement = document.querySelector(".perfil-img img");
+  const bannerImgElement = document.querySelector(".banner-perfil img");
+
+  // Carregar dados do Local Storage
+  const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
+
+  // Preenche o perfil e o banner com as imagens salvas
+  const preencherPerfil = () => {
+    if (dadosUsuario.perfilImg) perfilImgElement.src = dadosUsuario.perfilImg;
+    if (dadosUsuario.bannerImg) bannerImgElement.src = dadosUsuario.bannerImg;
+  };
+
+  // Atualiza as imagens no Local Storage
+  const salvarImagemNoLocalStorage = (key, imgElement) => {
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = imgElement.src;
+
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const dataURL = canvas.toDataURL("image/png");
+      dadosUsuario[key] = dataURL;
+      localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+    };
+  };
+
+  // Função para selecionar imagem e mostrar preview
+  const configurarSelecaoDeImagem = (images, previewElement) => {
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        previewElement.src = img.src; // Define o preview com a imagem clicada
+        previewElement.alt = img.alt; // Define o texto alternativo
+      });
+    });
+  };
+
+  // Configura as galerias de imagens
+  configurarSelecaoDeImagem(perfilImages, perfilPreview);
+  configurarSelecaoDeImagem(bannerImages, bannerPreview);
+
+  // Salva as alterações de perfil e banner ao clicar em "Salvar"
+  saveProfileBtn.addEventListener("click", () => {
+    if (perfilPreview.src) {
+      perfilImgElement.src = perfilPreview.src;
+      salvarImagemNoLocalStorage("perfilImg", perfilPreview);
+    }
+    if (bannerPreview.src) {
+      bannerImgElement.src = bannerPreview.src;
+      salvarImagemNoLocalStorage("bannerImg", bannerPreview);
+    }
+
+    // Fechar modal usando Bootstrap
+    const modal = bootstrap.Modal.getInstance(document.getElementById("editProfileModal"));
+    modal.hide();
+  });
+
+  // Preenche o perfil com as imagens salvas
+  preencherPerfil();
+});
