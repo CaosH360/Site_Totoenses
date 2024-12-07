@@ -14,7 +14,7 @@ body {
 .container {
   background: #00294c5e;
   padding-inline: 60px;
-  height: 80vh;
+  height: 85vh;
   max-width: 60vw;
   border: 2px solid #1f3b53;
   border-radius: 15px;
@@ -174,7 +174,7 @@ body {
     padding-inline: 40px;
     margin-inline: 5vw;
     margin-block: 5vh;
-    height: 85vh;
+    height: 110vh;
   }
 
   .input-box label {
