@@ -203,6 +203,7 @@ body {
     padding-inline: 15vw;
     margin-inline: 5vw;
     margin-block: 5vh;
+    height: 90vh;
   }
   .container input {
     padding-inline: 15vw;

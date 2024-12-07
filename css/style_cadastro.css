@@ -209,7 +209,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .container {
-      height: 130vh;
+      height: 160vh;
       max-width: 60vw;
     }
 
@@ -226,6 +226,10 @@ input[type="number"]::-webkit-outer-spin-button {
     body {
       font-size: 14px;
       display: flex;
+    }
+
+    .container {
+      height: 150vh;
     }
 
     .container input {
