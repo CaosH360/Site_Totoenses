@@ -10,6 +10,7 @@ Repositório para o projeto da disciplina de Desenvolvimento Front-end.
 - [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Imagens] (#Imagens)
 - [Licença](#licença)
 - [Contato](#contato)
 
@@ -31,6 +32,16 @@ O projeto "Site Totoenses" é uma aplicação web desenvolvida como parte da dis
 - CSS3
 - JavaScript
 - [Vercel](https://vercel.com/) para hospedagem
+
+## Imagens 
+
+![Imagens do site](caminho/para/screenshot.png)
+![Imagens do site](caminho/para/screenshot.png)
+![Imagens do site](caminho/para/screenshot.png)
+![Imagens do site](caminho/para/screenshot.png)
+![Imagens do site](caminho/para/screenshot.png)
+![Imagens do site](caminho/para/screenshot.png)
+
 
 ## Licença
 
