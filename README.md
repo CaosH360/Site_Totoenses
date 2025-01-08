@@ -1,7 +1,7 @@
 
 # Site Totoenses
 
-![Licença](https://img.shields.io/badge/licença-MIT-blue.svg)
+![Licença](https://img.shields.io/badge/licença-CC%20BY--ND%204.0-blue)
 
 Repositório para o projeto da disciplina de Desenvolvimento Front-end.
 
@@ -34,7 +34,7 @@ O projeto "Site Totoenses" é uma aplicação web desenvolvida como parte da dis
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença **Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)**. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
 
 ## Contato
 
