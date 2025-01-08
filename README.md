@@ -10,7 +10,7 @@ Repositório para o projeto da disciplina de Desenvolvimento Front-end.
 - [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Imagens] (#Imagens)
+- [Imagens](#Imagens)
 - [Licença](#licença)
 - [Contato](#contato)
 
@@ -32,15 +32,31 @@ O projeto "Site Totoenses" é uma aplicação web desenvolvida como parte da dis
 - CSS3
 - JavaScript
 - [Vercel](https://vercel.com/) para hospedagem
+- [Site hospedado para testes](https://totoences.vercel.app/pages/cadastro.html)
 
-## Imagens 
+## Imagens
+- Cadstro
+<img align="center" alt="Imagem do cadastro" height="400" width="700" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092227.png"/>
 
-![Imagens do site](caminho/para/screenshot.png)
-![Imagens do site](caminho/para/screenshot.png)
-![Imagens do site](caminho/para/screenshot.png)
-![Imagens do site](caminho/para/screenshot.png)
-![Imagens do site](caminho/para/screenshot.png)
-![Imagens do site](caminho/para/screenshot.png)
+- Perfil
+
+<img align="center" alt="Imagem do perfil" height="400" width="700" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092254.png"/>
+
+- Edição de Perfil
+
+<img alt="Imagem do edição do perfil" height="400" width="250" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092325.png"/>
+
+- Ranking
+
+<img align="center" alt="Imagem do ranking" height="400" width="700" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092342.png"/>
+
+- Evento
+
+<img align="center" alt="Imagem do evento" height="400" width="700" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092359.png"/>
+
+- Home
+
+<img align="center" alt="Imagem do home" height="400" width="700" src="https://github.com/CaosH360/site_totoenses/blob/main/images/Screenshot%202025-01-08%20092447.png"/>
 
 
 ## Licença
